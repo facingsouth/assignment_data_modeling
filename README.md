@@ -80,30 +80,18 @@ User, Submission, Comment
 
 
 Attributes
-  <!-- Users:   id, first name, last name, email, courses -->
-User: id, username, email
-Profile: id, city, state, country, age, gender, user_id
+
 
 Type of attributes
-id: integer
-username: VARCHAR(255)
-email: VARCHAR(255)
-city: VARCHAR(20)
-state: VARCHAR(20)
-country: VARCHAR(20)
-age: integer
-gender: enum("Male", "Female", "Others")
-user_id: integer
 
 
 Relationships b/w entities
-User has_one Profile
-Profile has_one User
+
 
 Convert into Tables
 
 Normalize Data
-Could put country, state, city in its own table.
+
 
 
 

@@ -80,6 +80,8 @@ User, Submission, Comment
 
 
 Attributes
+Users: user_id, username, email, crypted password
+Submission: sub_id, user_id, link, title, post_time
 
 
 Type of attributes

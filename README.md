@@ -38,23 +38,93 @@ Online Learning Platform
 System Goals: Display Course listings, and lesson title and text
 
 Entities (Models):
-User
-Profile
+User, Profile
 
 
 Attributes
   <!-- Users:   id, first name, last name, email, courses -->
-
+User: id, username, email
+Profile: id, city, state, country, age, gender, user_id
 
 Type of attributes
+id: integer
+username: VARCHAR(255)
+email: VARCHAR(255)
+city: VARCHAR(20)
+state: VARCHAR(20)
+country: VARCHAR(20)
+age: integer
+gender: enum("Male", "Female", "Others")
+user_id: integer
 
 
 Relationships b/w entities
-
+User has_one Profile
+Profile has_one User
 
 Convert into Tables
 
 Normalize Data
+Could put country, state, city in its own table.
+
+
+
+<!-- THIRD EXERCISE -->
+
+Message Board
+
+System Goals: build a message board like Hacker News. Users can post links. Other users can comment on these submissions or comment on the comments.
+
+Entities (Models):
+User, Submission, Comment
+
+
+Attributes
+  <!-- Users:   id, first name, last name, email, courses -->
+User: id, username, email
+Profile: id, city, state, country, age, gender, user_id
+
+Type of attributes
+id: integer
+username: VARCHAR(255)
+email: VARCHAR(255)
+city: VARCHAR(20)
+state: VARCHAR(20)
+country: VARCHAR(20)
+age: integer
+gender: enum("Male", "Female", "Others")
+user_id: integer
+
+
+Relationships b/w entities
+User has_one Profile
+Profile has_one User
+
+Convert into Tables
+
+Normalize Data
+Could put country, state, city in its own table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

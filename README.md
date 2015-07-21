@@ -96,7 +96,64 @@ Normalize Data
 
 
 
+<!-- Forth EXERCISE -->
 
+E-commerce Site
+
+System Goals: keep track of products, users, orders, shipments and all the bits and pieces necessary to glue them all together.
+
+Entities (Models):
+User, Product, Order, Shipment
+user-address join table
+product-order join table
+
+Attributes
+User: user_id, email, passwd
+Address: address_id, street_number, street_name, city, state, country
+Product: product_id, name, description, price
+Order: order_id, user_id
+Shipment: shipment_id, address_id(shipping address), order_id
+user-address: user_id, address_id
+product-order: product_id, order_id, quantity
+
+Type of attributes
+all_ids: int
+User:
+      email: varchar(20) 
+      passwd: varchar(255)
+Address:
+      street_number: int 
+      street_name:varchar(255) 
+      city: varchar(20) 
+      state: char(2) 
+      country: varchar(20)
+Product:
+      name: varchar(20)
+      description: text 
+      price: decimal
+Order: order_id, user_id
+Shipment: shipment_id, address_id, order_id
+user-address: user_id, address_id
+product-order: product_id, order_id,
+      quantity: int
+
+
+Relationships b/w entities
+User      has_many: Orders, Addresses
+
+Address   has_many: Users, Shipments
+
+Product   has_many: Orders
+
+Order     has_many: Products, Shipments
+          has_one:  Users
+
+Shipment  has_one:  Addresses, Orders
+
+
+Convert into Tables
+
+Normalize Data
 
 
 
